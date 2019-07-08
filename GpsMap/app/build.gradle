@@ -16,9 +16,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            resValue 'string', "google_maps_key", GpsMap_GoogleMapsKey
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue 'string', "google_maps_key", GpsMap_GoogleMapsKey
         }
     }
 }
